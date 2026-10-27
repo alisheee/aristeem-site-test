@@ -198,7 +198,7 @@ footer{padding:28px;text-align:center;color:var(--mut);font-size:13px;background
 .app{min-height:calc(100vh - 48px);background:radial-gradient(800px 500px at 50% -10%,#3a0fa044,transparent),var(--bg)}
 .center{display:grid;place-items:center;padding:40px 16px}
 .card{background:var(--s1);border:1px solid var(--bd);border-radius:22px;padding:36px;width:100%;max-width:900px}
-.card h2{font-size:28px;text-align:center;margin-bottom:8px}.card .sub{color:var(--mut);text-align:center;max-width:600px;margin:0 auto 26px}
+.card{display:flex;flex-direction:column;min-height:0}.card .nav2{margin-top:auto;padding-top:22px}.card.mid{justify-content:center;align-items:center;text-align:center}.card.mid .tv{width:100%}.card h2{font-size:28px;text-align:center;margin-bottom:8px}.card .sub{color:var(--mut);text-align:center;max-width:600px;margin:0 auto 26px}
 .card .stp{text-align:center;font-size:12px;color:var(--mut);margin-bottom:8px}
 .prog{display:flex;gap:4px;max-width:260px;margin:0 auto 6px}.prog i{flex:1;height:4px;border-radius:2px;background:var(--bd)}.prog i.d{background:#8b5cff}
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
@@ -268,6 +268,54 @@ footer{padding:28px;text-align:center;color:var(--mut);font-size:13px;background
 .big2{font-family:Outfit,sans-serif;font-size:26px;font-weight:700}.pnl .ac{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.pnl .ac .btn{text-align:center}
 .pnl .one{margin-top:12px;display:block;text-align:center;width:100%}.pl2 div{display:flex;justify-content:space-between;padding:5px 0;font-size:13px}
 .tag{font-size:11px;background:#2a1c66;border-radius:6px;padding:2px 8px;color:#d4c3ff}
+/* tour (new onboarding) */
+.tv{margin:0 auto 20px;max-width:640px}.tv .dev{border-radius:12px}
+.bw{background:#17151f;display:flex;gap:6px;align-items:center;padding:8px 12px}
+.bw i{width:8px;height:8px;border-radius:50%;background:#444}
+.bw u{flex:1;margin-left:8px;background:#0c0720;border-radius:6px;padding:3px 10px;font:11px Inter,sans-serif;color:var(--mut);text-decoration:none}
+.dsk{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#1b0a5c,#6d28ff 60%,#b01cf0);overflow:hidden}
+.dsk .ics{position:absolute;left:10px;top:10px;display:grid;gap:10px}
+.dsk .ics i{display:block;width:40px;text-align:center;font:500 9px Inter,sans-serif;color:#fff;font-style:normal}
+.dsk .ics i::before{content:"";display:block;width:26px;height:26px;margin:0 auto 2px;border-radius:7px;background:#ffffff33;border:1px solid #fff5}
+.dsk .tb{position:absolute;left:0;right:0;bottom:0;height:22px;background:#0b0620cc;display:flex;align-items:center;gap:8px;padding:0 10px;font-size:9px;color:#fff}
+.dsk .tb b{width:12px;height:12px;border-radius:4px;background:var(--g)}.dsk .tb span{margin-left:auto}
+.lo{position:absolute;inset:0;display:grid;place-items:center;background:#0c0720;color:var(--mut);font-size:12px;animation:lo 6s ease-in-out infinite}
+@keyframes lo{0%,12%{opacity:1}28%,100%{opacity:0}}
+.win{position:absolute;background:#17151f;border:1px solid #fff3;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px #000a}
+.win .h{background:#241a4a;padding:3px 8px;font-size:9px;color:#fff}.win svg{display:block;width:100%;height:calc(100% - 18px)}
+.wb{padding:10px;font-size:11px;color:#fff}
+.w1{left:18%;top:12%;width:46%;height:62%;animation:pop 6s ease-in-out infinite}
+.w2{left:44%;top:24%;width:48%;height:56%;opacity:0;animation:pop2 6s ease-in-out infinite}
+@keyframes pop{0%,8%{opacity:0;transform:scale(.92)}22%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes pop2{0%,42%{opacity:0;transform:scale(.92)}55%,92%{opacity:1;transform:none}100%{opacity:0}}
+.lib{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;padding:5px;height:calc(100% - 18px)}.lib div{border-radius:5px;overflow:hidden}.lib svg{height:100%}
+.s3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+.s3 div{background:var(--s3);border:1.5px solid var(--bd);border-radius:14px;padding:18px 10px;text-align:center;font-size:13px;color:var(--mut);animation:hl3 6s infinite}
+.s3 div:nth-child(2){animation-delay:2s}.s3 div:nth-child(3){animation-delay:4s}
+.s3 b{display:block;color:var(--fg);font:500 17px Outfit,sans-serif;margin:6px 0 2px}.s3 svg{width:30px;height:30px;margin:0 auto;fill:none;stroke:#cdb8ff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.s3 em{display:block;font-style:normal;font-size:28px;color:#cdb8ff;line-height:30px}
+@keyframes hl3{0%,28%{border-color:#8b5cff;background:#251656;color:#e8e1ff}34%,100%{border-color:var(--bd);background:var(--s3);color:var(--mut)}}
+.dk{background:#0b0620;border:1px solid #3b2a82;border-radius:16px;padding:20px;margin-bottom:18px}
+.dkb{display:flex;gap:2px;height:30px;border-radius:8px;overflow:hidden;background:#241a4a}
+.dkb i{display:block;height:100%;transform-origin:left;animation:grow 5s ease-in-out infinite}
+@keyframes grow{0%{transform:scaleX(0)}25%,85%{transform:none}100%{transform:scaleX(0)}}
+.dkl{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--mut)}
+.dkl span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;background:var(--c)}
+.hr{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.hr>div{background:#0b0620;border:1px solid #3b2a82;border-radius:16px;padding:18px}
+.hr .m{height:8px;background:#241a4a;border-radius:4px;overflow:hidden;margin:10px 0}
+.hr .m i{display:block;height:100%;background:var(--g);animation:drain 6s linear infinite}
+@keyframes drain{from{width:100%}to{width:78%}}
+.hr .ev{display:grid;gap:6px;font-size:13px;color:var(--mut)}.hr .ev span{opacity:0;animation:ev 6s infinite}
+.hr .ev span:nth-child(2){animation-delay:1.5s}.hr .ev span:nth-child(3){animation-delay:3s}
+@keyframes ev{0%{opacity:0}8%,90%{opacity:1}100%{opacity:0}}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#34d399;margin-right:6px;animation:ping 1.6s infinite}
+.pill{display:inline-block;background:var(--g);border-radius:999px;padding:4px 14px;font-weight:600;animation:glow 2.4s infinite}
+.chp{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px 0 14px}.chp span{border:1px solid var(--bd);background:var(--s3);border-radius:999px;padding:6px 14px;font-size:13px}
+.ev2{display:grid;gap:6px;font-size:13px;color:var(--mut);margin-bottom:18px}.ev2 span{opacity:.3;animation:ev3 .6s forwards}
+.ev2 span:nth-child(2){animation-delay:1.1s}.ev2 span:nth-child(3){animation-delay:2.2s}
+@keyframes ev3{to{opacity:1;color:#fff}}
+@media(max-width:700px){.s3,.hr{grid-template-columns:1fr}}
 @media(max-width:1000px){.pg{grid-template-columns:repeat(2,1fr)}.gg{grid-template-columns:repeat(4,1fr)}.stg{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){.hg,.two,.dg,.sg,.bridge,.inc2{grid-template-columns:1fr}.g3,.pr{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:1fr 1fr}.payc{grid-template-columns:1fr}.nav a.h{display:none}.hv{min-height:0;margin-top:20px}.sr{display:none}.sl{padding:28px 22px}.hero{padding-top:190px}
  .rg{grid-template-columns:1fr 1fr}.rg .twc{grid-column:1/-1;order:-1;margin-bottom:10px}.rg .twc .tw{max-width:220px}
@@ -313,7 +361,7 @@ footer{padding:28px;text-align:center;color:var(--mut);font-size:13px;background
 var S={extra:0,plan:2,cur:"landing"},T=null,_n=0;
 var EX=[[0,0],[50,5.99],[75,7.99],[100,9.99],[150,12.99]];
 var PL=[{n:"Essential",t:"Monthly",mo:34.99,tot:34.99,h:"Stay flexible, play regularly",note:"Payment per month"},{n:"Smart Flex",t:"6 Months",mo:29.99,tot:179.94,h:"An easy start without overpaying",note:"Single payment for 6 months"},{n:"Ultimate",t:"Annual",mo:24.99,tot:299.88,h:"Best long-term value",note:"Single payment for 12 months"}];
-var GRP={landing:0,signup:1,intro:2,storage:2,plan:2,review:2,pay:3,prep:4,ready:4,dash:5};
+var GRP={landing:0,signup:1,intro:2,games:2,stay:2,space:2,hours:2,device:2,plan:2,review:2,pay:3,prep:4,ready:4,dash:5};
 var P=[["#1b0a5c","#6d28ff","#ff5ad9",0],["#3b0764","#c026d3","#fbbf24",1],["#082f49","#0e7490","#22d3ee",0],["#4c0519","#be123c","#fb923c",1],["#1e1b4b","#4338ca","#a78bfa",0],["#064e3b","#0f766e","#a3e635",1]];
 function money(n){return "€"+n.toFixed(2)}
 function extra(){return EX[S.extra]}
@@ -390,12 +438,20 @@ function go(s){
 function pick(k,i){S[k]=i;var y=window.scrollY;go(S.cur);window.scrollTo(0,y)}
 function eye(b){var i=b.parentNode.querySelector("input");i.type=i.type==="password"?"text":"password"}
 function ob(step,title,sub,body,back,next,nl){
- var p="";for(var i=1;i<=4;i++)p+='<i class="'+(i<=step?"d":"")+'"></i>';
- return '<div class="app center"><div class="card"><div class="prog">'+p+'</div><div class="stp">Step '+step+' of 4</div><h2>'+title+'</h2><p class="sub">'+sub+'</p>'+body+
+ var p="";for(var i=1;i<=9;i++)p+='<i class="'+(i<=step?"d":"")+'"></i>';
+ return '<div class="app center"><div class="card"><div class="prog" style="max-width:340px">'+p+'</div><div class="stp">Step '+step+' of 9</div><h2>'+title+'</h2><p class="sub">'+sub+'</p>'+body+
  '<div class="nav2">'+(back?'<button class="btn gh sm" onclick="go(\''+back+'\')">Back</button>':"<span></span>")+(next?'<button class="btn" onclick="go(\''+next+'\')">'+nl+'</button>':"")+'</div></div></div>';
 }
 function head(){return '<header class="hd"><div class="wrap nav"><span class="logo"><i></i>ARISTEEM</span><div class="tabs"><span>Work Space</span><span>Play Space</span><span class="a">Gaming PC</span></div><span class="sp"></span><a class="h" href="#landing">Blog</a><button class="btn gh sm" onclick="go(\'signup\')">Get Your Gaming PC</button><button class="btn sm" onclick="go(\'signup\')">Sign In</button></div></header>'}
 function planCard(i,sel){var p=PL[i];return '<button class="plan '+(sel?"sel":"")+'" onclick="pick(\'plan\','+i+')">'+(i===2?'<span class="best">Best value</span>':'')+'<em>'+p.n+'</em><span class="tag2">'+p.t+'</span><div class="pp">'+money(p.mo)+' <small>/mo</small></div><div class="mut">'+p.h+'</div><div><div class="rw"><span>Hours / Month</span><b>150 h</b></div><div class="rw"><span>File Storage</span><b>75 GB</b></div><div class="rw"><span>Gaming PC Storage</span><b>100 GB</b></div><div class="rw"><span>Extra Hours</span><b>€0.4–0.6/h</b></div></div><div class="tt">Total<b>'+money(p.tot)+'</b>('+p.note+')</div></button>'}
+function desk(k,t){
+ var inner='<div class="ics"><i>Recycle</i><i>Games</i><i>Files</i></div><div class="tb"><b></b>Gaming PC<span>21:30</span></div>';
+ if(k==="games"){
+  var g=[["city","#3b0764","#c026d3","#22d3ee"],["tower","#1e1b4b","#6d28d9","#a3e635"],["pines","#0f172a","#1e3a5f","#e2e8f0"],["mesa","#7c2d12","#ea580c","#fde68a"]];
+  inner+='<div class="win w1"><div class="h">Game launcher · Library</div><div class="lib">'+g.map(function(x){return "<div>"+tile(x[0],x[1],x[2],x[3])+"</div>"}).join("")+'</div></div><div class="win w2"><div class="h">Game running</div>'+gs(1,1,60)+'</div>';
+ } else inner+='<div class="win w1"><div class="h">This PC</div><div class="wb">'+(t||"Your own PC in the cloud")+'</div></div><div class="lo">Your device · browser</div>';
+ return '<div class="tv"><div class="dev"><div class="bw"><i></i><i></i><i></i><u>play.aristeem.com</u></div><div class="dsk">'+inner+'</div></div></div>';
+}
 
 var SCR={
 landing:function(){
@@ -435,40 +491,51 @@ landing:function(){
  '<section class="cta"><div class="bg">'+art(1)+'</div><div class="wrap"><h2>Ready to play on your own cloud PC?</h2><p>Pick a plan and have your gaming PC set up in minutes.</p><div class="acts" style="justify-content:center"><button class="btn" onclick="go(\'signup\')">Get Your Gaming PC</button><button class="btn gh" onclick="document.getElementById(\'pricing\').scrollIntoView()">View plans</button></div></div></section><footer>© 2026 Aristeem · Prototype</footer>';
 },
 signup:function(){
- return '<div class="sg"><div class="sl"><div class="lg"><span>ARISTEEM</span><em>Gaming PC</em></div><form onsubmit="return false"><h2>Create your account</h2><p class="mut" style="font-size:14px">Sign up to get started and set up your Gaming PC.</p><div class="soc"><button type="button" aria-label="Google" onclick="go(\'intro\')" style="color:#ea4335">G</button><button type="button" aria-label="Facebook" onclick="go(\'intro\')" style="color:#3b82f6">f</button><button type="button" aria-label="Apple" onclick="go(\'intro\')"></button></div><div class="or">or</div><input class="in" placeholder="Email" aria-label="Email"><div class="pw"><input class="in" type="password" placeholder="Password" aria-label="Password"><button type="button" aria-label="Show password" onclick="eye(this)">◉</button></div><div class="mut">At least 8 characters · 1 uppercase · 1 number · 1 symbol</div><div class="pw"><input class="in" type="password" placeholder="Confirm password" aria-label="Confirm password"><button type="button" aria-label="Show password" onclick="eye(this)">◉</button></div><label class="chk"><input type="checkbox" checked> I agree to Aristeem’s Terms of Use and Privacy Policy.</label><label class="chk"><input type="checkbox"> I’d like to receive product updates and offers.</label><button class="btn" type="button" onclick="go(\'intro\')">Register with Email</button><p style="text-align:center;font-size:14px;margin-top:18px">Already have an account? <a class="lnk" href="#signup">Login</a></p></form></div>'+
+ return '<div class="sg"><div class="sl"><div class="lg"><span>ARISTEEM</span><em>Gaming PC</em></div><form onsubmit="return false"><h2>Create your account</h2><p class="mut" style="font-size:14px">Sign up to get started and set up your Gaming PC.</p><div class="soc"><button type="button" aria-label="Google" onclick="go(\'intro\')" style="color:#ea4335">G</button><button type="button" aria-label="Facebook" onclick="go(\'intro\')" style="color:#3b82f6">f</button><button type="button" aria-label="Apple" onclick="go(\'intro\')">&#xF8FF;</button></div><div class="or">or</div><input class="in" placeholder="Email" aria-label="Email"><div class="pw"><input class="in" type="password" placeholder="Password" aria-label="Password"><button type="button" aria-label="Show password" onclick="eye(this)">◉</button></div><div class="mut">At least 8 characters · 1 uppercase · 1 number · 1 symbol</div><div class="pw"><input class="in" type="password" placeholder="Confirm password" aria-label="Confirm password"><button type="button" aria-label="Show password" onclick="eye(this)">◉</button></div><label class="chk"><input type="checkbox" checked> I agree to Aristeem’s Terms of Use and Privacy Policy.</label><label class="chk"><input type="checkbox"> I’d like to receive product updates and offers.</label><button class="btn" type="button" onclick="go(\'intro\')">Register with Email</button><p style="text-align:center;font-size:14px;margin-top:18px">Already have an account? <a class="lnk" href="#signup">Login</a></p></form></div>'+
  '<div class="sr"><div><div class="cmp"><div class="dev">'+gs(0,0)+'</div></div><h3><mark>Your PC in the Cloud.</mark> Fun on Any Screen.</h3><p>Let the cloud handle the performance while you simply enjoy the game.</p></div><div class="legal">Support · Terms of Use · Privacy Policy · Cookie Policy</div></div></div>';
 },
 intro:function(){
- return ob(1,"Your Own Gaming PC in the Cloud","Get a powerful Windows PC in the cloud, install your favorite compatible games, and play without needing a powerful computer of your own.",
- '<div class="tiles"><div class="tile"><div class="tl2">'+IC.pc+'</div><b>Your Own Windows PC</b><span>A Windows environment in the cloud</span></div><div class="tile"><div class="tl2">'+IC.dl+'</div><b>Install Your Games</b><span>Compatible games through supported platforms</span></div><div class="tile"><div class="tl2">'+IC.pad+'</div><b>Play on Compatible Devices</b><span>Connect from supported devices</span></div></div><p class="note" style="max-width:none;margin:0;text-align:center">Your plan gives you access to the gaming PC. Games and subscriptions from third-party platforms are purchased separately.</p>',"","storage","Continue");
+ return ob(2,"Meet Your Gaming PC","A full Windows PC in the cloud, available right in your browser. It’s your own gaming PC — not access to a fixed catalog of games.",
+ desk("meet")+'<p class="note" style="max-width:none;margin:0;text-align:center">A complete Windows PC you can use for your own tasks, not only for launching games.</p>',"signup","games","Continue");
 },
-storage:function(){
- var e=extra(),tot=100+e[0],R=70,C=2*Math.PI*R,off=C*(1-tot/250);
- var ring='<div class="ringw"><svg viewBox="0 0 180 180" aria-hidden="true"><defs><linearGradient id="rgd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b1cff"/><stop offset="1" stop-color="#e060ff"/></linearGradient></defs><circle cx="90" cy="90" r="'+R+'" fill="none" stroke="#241a4a" stroke-width="14"/><circle class="ringp" cx="90" cy="90" r="'+R+'" fill="none" stroke="url(#rgd)" stroke-width="14" stroke-linecap="round" transform="rotate(-90 90 90)" stroke-dasharray="'+C.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'" style="--c:'+C.toFixed(1)+'"/></svg><div class="ringt"><b>'+tot+'</b><span>GB total</span></div></div>';
- var list='<div class="stl"><div><span>Included with your PC</span><b>100 GB</b></div><div class="ex"><span>Extra storage</span><b>'+(e[0]?"+"+e[0]+" GB":"—")+'</b></div><div class="tt"><span>For Windows &amp; games</span><span>'+tot+' GB</span></div><div style="border:0"><span>Extra cost</span><b>'+(e[1]?"+"+money(e[1])+"/mo":"Included")+'</b></div></div>';
- var opts=EX.map(function(x,i){var bars="",j;for(j=0;j<=i;j++)bars+='<rect x="8" y="'+(36-j*7)+'" width="30" height="5.5" rx="2.7" fill="'+(j===0?"#a79ccb":"url(#og"+i+")")+'"/>';
-  return '<button class="opt '+(S.extra===i?"on":"")+'" onclick="pick(\'extra\','+i+')">'+(i===3?'<span class="pop">Popular</span>':'')+'<svg viewBox="0 0 46 46" aria-hidden="true"><defs><linearGradient id="og'+i+'" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7c4dff"/><stop offset="1" stop-color="#e060ff"/></linearGradient></defs>'+bars+'</svg><b>'+(x[0]?"+"+x[0]+" GB":"No extra")+'</b><span>'+(x[1]?"+"+money(x[1])+"/mo":"Included")+'</span></button>'}).join("");
- return ob(2,"Choose Your Storage","Your gaming PC includes 100 GB of storage for Windows, games, and other files. Add more space if you need room for a larger game library — or do it later, it’s optional.",
- '<div class="stv">'+ring+list+'</div><div class="stg">'+opts+'</div><p class="note" style="max-width:none;margin:18px 0 0;text-align:center">You can add more storage later at any time. You don’t have to decide now.</p>',"intro","plan","Continue");
+games:function(){
+ return ob(3,"Your Games, Your Platforms","Play your own games through the platforms you already use.",
+ '<div class="lcs" style="margin-bottom:18px"><div class="lc"><div class="ic">'+IC.store+'</div>Steam</div><div class="lc"><div class="ic">'+IC.store+'</div>Epic Games Store</div><div class="lc"><div class="ic">'+IC.store+'</div>and more</div></div>'+desk("games")+'<p class="note" style="max-width:none;margin:0;text-align:center">Sign in with your own accounts. Games and third-party subscriptions aren’t included in your Aristeem plan unless stated otherwise. Compatibility depends on each game.</p>',"intro","stay","Continue");
+},
+stay:function(){
+ return ob(4,"Your Games Stay Installed","No need to reinstall after every session.",
+ '<div class="s3"><div>'+IC.pad+'<b>Game installed</b>Your session is running</div><div><em>⏻</em><b>Session ended</b>The PC switches off</div><div>'+IC.pc+'<b>Next launch</b>Your game is still there</div></div><p class="note" style="max-width:none;margin:0;text-align:center">Installed games and files are saved between sessions. Ending a session doesn’t delete anything from your PC.</p>',"games","space","Continue");
+},
+space:function(){
+ var dk='<div class="dk"><div class="dkb"><i style="width:10%;background:#a79ccb"></i><i style="width:16%;background:#7c4dff;animation-delay:.3s"></i><i style="width:14%;background:#c026d3;animation-delay:.6s"></i><i style="width:12%;background:#22d3ee;animation-delay:.9s"></i><i style="width:14%;background:transparent"></i><i style="width:34%;background:#8b5cff22;border:2px dashed #8b5cff;animation-delay:1.5s"></i></div><div class="dkl"><span style="--c:#a79ccb">Windows</span><span style="--c:#7c4dff">Game 1</span><span style="--c:#c026d3">Game 2</span><span style="--c:#22d3ee">Game 3</span><span style="--c:#241a4a">Free space</span><span style="--c:#8b5cff">Extra storage (optional)</span></div><div class="mut" style="margin-top:10px">Base storage: 100 GB for Windows, games, and files</div></div>';
+ return ob(5,"Space for Your Game Library","Start with the base storage and expand it as your library grows.",dk+'<p class="note" style="max-width:none;margin:0;text-align:center">You don’t need to choose anything now. You can add more storage later from your dashboard.</p>',"stay","hours","Continue");
+},
+hours:function(){
+ var hr='<div class="hr"><div><div class="mut"><span class="dot"></span>Session active</div><div class="big2" style="margin:6px 0">148h 20min <small class="mut" style="font-size:13px;font-weight:400">left</small></div><div class="m"><i></i></div><div class="ev"><span>● Session started — time counting</span><span>● Installing a game — time counting</span><span>● Playing — time counting</span></div></div><div><div class="mut">Need more time?</div><div class="big2" style="margin:6px 0">Add hours</div><div class="pill">+10 h</div><p class="mut" style="margin-top:10px">Extra hours: €0.4–0.6/h</p></div></div>';
+ return ob(6,"Play on Your Schedule","Your plan includes a set number of hours. Need more? Add extra hours.",hr+'<p class="note" style="max-width:none;margin:0;text-align:center">Time is deducted during an active session, not only while you’re playing. Extra hours add to your plan — an active plan is still required to start your PC.</p>',"space","device","Continue");
+},
+device:function(){
+ return ob(7,"Ready for Your Device","Open the same Windows desktop in the browser on a compatible device.",
+ '<div class="dc"><div class="lp"><div class="dev">'+gs(4,1,70)+'</div><div class="bs"></div></div><div class="ph">'+gs(5,0,185)+'</div><div class="pd">'+bigpad()+'</div></div><div class="chp"><span>Compatible device</span><span>Stable internet connection</span></div><p class="note" style="max-width:none;margin:0;text-align:center">You don’t need to buy a powerful computer to access your cloud Gaming PC. Whether a game launches and how comfortable it is to control depends on compatibility.</p>',"hours","plan","See plans");
 },
 plan:function(){
- return ob(3,"Choose how you want to access it","Review the included hardware, storage, and access terms before continuing. Refunds are available within the first 30 minutes of your first session.",
- '<div class="pr">'+[0,1,2].map(function(i){return planCard(i,S.plan===i)}).join("")+'</div>',"storage","review","Continue");
+ return ob(8,"Choose Your Plan","Review the included hardware, storage, and access terms before continuing. Refunds are available within the first 30 minutes of your first session.",
+ '<div class="pr">'+[0,1,2].map(function(i){return planCard(i,S.plan===i)}).join("")+'</div><p class="mut" style="text-align:center;margin:14px 0 0">Every plan: AMD Ryzen 9 9900X · Radeon RX 7900 XT · 32 GB DDR5 · 150 h/month · 100 GB for Windows &amp; games · 75 GB file storage</p><p class="note" style="max-width:none;margin:18px 0 0;text-align:center">Extra hours cost €0.4–0.6/h. Plans renew automatically; the renewal amount and date are shown on the next step.</p>',"device","review","Continue");
 },
 review:function(){
  var e=extra(),p=plan();
- return ob(4,"Review Your Gaming PC","Check your selected plan and storage. Next, you’ll go to a secure payment page.",
- '<div class="sum" style="max-width:560px;margin:0 auto"><div><span>Plan</span><span>'+p.n+' · '+p.t+' · '+money(p.tot)+'</span></div><div><span>Hardware</span><span>Ryzen 9 9900X · RX 7900 XT · 32 GB</span></div><div><span>Storage</span><span>'+(100+e[0])+' GB + 75 GB files</span></div><div><span>Extra storage</span><span>'+(e[1]?money(e[1])+"/mo":"—")+'</span></div><div class="tot"><span>Total today</span><span>'+money(total())+'</span></div></div><p class="mut" style="text-align:center;margin-top:14px">Game purchases and third-party platform subscriptions aren’t included.</p>',"plan","pay","Go to payment");
+ return ob(9,"Review Your Gaming PC","Check your selected plan and storage. Next, you’ll go to a secure payment page.",
+ '<div class="sum" style="max-width:560px;margin:0 auto"><div><span>Plan</span><span>'+p.n+' · '+p.t+' · '+money(p.tot)+'</span></div><div><span>Hardware</span><span>Ryzen 9 9900X · RX 7900 XT · 32 GB</span></div><div><span>Included hours</span><span>150 h / month</span></div><div><span>Storage</span><span>'+(100+e[0])+' GB + 75 GB files</span></div><div><span>Next charge</span><span>'+money(total())+' · '+p.note+'</span></div><div class="tot"><span>Total today</span><span>'+money(total())+'</span></div></div><p class="mut" style="text-align:center;margin-top:14px">Games and third-party platform subscriptions are paid separately unless included in the offer.</p>',"plan","pay","Go to payment");
 },
 pay:function(){
  var p=plan(),e=extra();
  return '<div class="payx"><div class="payb">https://checkout.payment-provider.example · separate payment service</div><div class="payc"><div class="pl1"><div class="mut2">Pay Aristeem</div><div class="amt">'+money(total())+'</div><div class="ln"><span>Gaming PC · '+p.n+' ('+p.t+')</span><span>'+money(p.tot)+'</span></div>'+(e[1]?'<div class="ln"><span>Extra storage +'+e[0]+' GB</span><span>'+money(e[1])+'</span></div>':'')+'<div class="ln tt2"><span>Total due today</span><span>'+money(total())+'</span></div><p class="mut2">'+p.note+'. The subscription renews automatically.</p></div><div class="pr1"><h3>Card details</h3><input class="pin" placeholder="Card number" aria-label="Card number"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><input class="pin" placeholder="MM / YY" aria-label="Expiry"><input class="pin" placeholder="CVC" aria-label="CVC"></div><button class="pay" onclick="go(\'prep\')">Pay '+money(total())+'</button><a class="bk" href="#review" onclick="go(\'review\');return false">Back to Aristeem</a><div class="mut2">Payments are processed by an external payment service.</div></div></div></div>';
 },
 prep:function(){
- return '<div class="app center"><div class="card" style="text-align:center;max-width:620px"><h2>Your Gaming PC Is Being Prepared</h2><p class="sub">We’re preparing your cloud gaming PC. Once it’s ready, you can connect to Windows and install your games.</p><div class="spin"><i></i></div><button class="btn gh sm" onclick="go(\'ready\')">Skip wait (prototype)</button></div></div>';
+ return '<div class="app center"><div class="card mid"><h2>Your Gaming PC Is Being Prepared</h2><p class="sub">We’re preparing your cloud gaming PC. This usually takes a moment — you can leave this page open.</p><div class="spin"><i></i></div><div class="ev2"><span>Creating your cloud PC</span><span>Setting up Windows</span><span>Running final checks</span></div><button class="btn gh sm" onclick="go(\'ready\')">Skip wait (prototype)</button></div></div>';
 },
 ready:function(){
- return '<div class="app center"><div class="card" style="text-align:center;max-width:620px"><div class="okc">✓</div><h2>Your Gaming PC Is Ready</h2><p class="sub">Everything is set up. Launch your cloud PC to get started.</p><button class="btn" onclick="go(\'dash\')">Launch Gaming PC</button></div></div>';
+ return '<div class="app center"><div class="card mid"><h2>Your Gaming PC Is Ready</h2><p class="sub">Your Windows desktop is ready. Launch your session to start playing.</p>'+desk("meet","Windows · Ready")+'<button class="btn" onclick="go(\'dash\')">Launch Gaming PC</button></div></div>';
 },
 dash:function(){
  var tot=100+extra()[0],used=38,left=tot-used,pct=Math.round(used/tot*100);
